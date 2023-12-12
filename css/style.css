@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: content-box;
+  background-size: cover;
+  animation: changebg 30s infinite linear;
+
+}
+@keyframes changebg{
+  0%{
+     background-image: url(../car3.jpg);
+  }
+  50%{
+     background-image: url(../car4.jpg);
+  }
+  100%{
+     background-image: url(../car.jpg);
+  }
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+}
+.circle{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    /*background-color: lightgray;*/
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main{
+  width: 250px;
+  height: 250px;
+  /*background-color: #fff;*/
+  position: absolute;
+  border-radius: 50%;
+}
+.main h1{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 15rem;
+  font-family: 'Hedvig Letters Serif', serif;
+  color: #fff;
+  animation: colorchange 5s infinite alternate;
+  /*-webkit-text-stroke: 0.2px #fff;*/
+}
+@keyframes colorchange{
+  0%{
+    background: -webkit-linear-gradient(90deg, rgba(0,255,188,1) 0%, rgba(103,227,24,1) 43%, rgba(0,252,220,1) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  25%{
+    background: -webkit-linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,212,255,1) 43%, rgba(2,0,36,1) 97%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  50%{
+    background: -webkit-linear-gradient(90deg, rgba(158,190,37,1) 0%, rgba(164,255,0,1) 43%, rgba(8,235,95,1) 97%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  75%{
+    background: -webkit-linear-gradient(90deg, rgba(255,235,0,1) 0%, rgba(227,180,24,1) 43%, rgba(252,182,0,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  100%{
+   color: #fff;
+  }
+}
+.text{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  animation: rotatetext 50s infinite linear;
+}
+
+@keyframes rotatetext{
+  0%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+
+.text p span{
+  position: absolute;
+  left: 50%;
+  font-size: 1.2rem;
+  transform-origin: 0 150px;
+  font-family: 'Hedvig Letters Serif', serif;
+  color: #fff;
+}
+.text p span:nth-child(10),
+.text p span:nth-child(17),
+.text p span:nth-child(27),
+.text p span:nth-child(30),
+.text p span:nth-child(34),
+.text p span:nth-child(1){
+  color: red;
+  font-weight: bold;
+}

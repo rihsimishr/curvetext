@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Curve Text</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="overlay"></div>
+	<div class="circle">
+		<div class="main">
+			<h1>V</h1>
+		</div>
+		<div class="text">
+			<p>ValentinePremiumAutomotiveCarSeatCovers</p>
+		</div>
+	</div>
+<script type="text/javascript">
+	const text = document.querySelector('.text p');
+	// console.log(text);
+	text.innerHTML = text.innerText.split("").map(
+		(char, i) =>
+		`<span style="transform:rotate(${i*9.2}deg)">${char}</span>`
+		).join("")
+</script>
+</body>
+</html>
